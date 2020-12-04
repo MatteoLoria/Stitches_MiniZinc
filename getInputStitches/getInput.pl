@@ -13,7 +13,7 @@ for(@input){
     
     chomp;
 
-    if($_ =~ m/"(.+);(.+)"/){
+    if($_ =~ m/(.+);(.+)/){
         $sumsString = $1;
         $groupsInput = $2;
     }
@@ -32,7 +32,7 @@ $i = 1;
 
 for(@sums){
 
-    if($i <= $size/2){
+    if($i <= $n){
         push(@colSums, $_);
     }
     else{
@@ -46,7 +46,7 @@ for(@sums){
 
 @groups = split(',', $groupsInput);
 
-open($data, ">", "data.dzn") || die "Impossibile aprire il file $! \n";
+open($data, ">", "../input.dzn") || die "Impossibile aprire il file $! \n";
 
 print $data "n = $n;\n";
 
