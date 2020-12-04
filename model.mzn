@@ -3,18 +3,50 @@ int: n;
 enum TYPE = {Empty, Right, Down, Implicit};
 set of int: indices = 1..n;
 
+%numero di buchi esatti per riga e colonna
 array[indices] of int: rowSum;
 array[indices] of int: colSum;
 
+%matrice di gruppi
 array[indices, indices] of int: groups; % il numero di gruppi è sempre n?
 % controllo 1/, ecc...
 
+%matrice di variabili decisionali
 array[indices, indices] of var TYPE: results;
+
+
 int: rowN;
 int: colN;
 set of int: rowPair = 1..rowN;
 set of int: colPair = 1..colN;
+%matrice di adiacenza
 array[rowPair, colPair] of int: pair;
+
+%l'ultima colonna non può avere un valore "Right"
+constraint forall(i in indices) (results[i,n] != Right);
+
+%l'ultima riga non può avere un valore "Down"
+constraint forall(j in indices) (results[n,j] != Down);
+
+%il numero di buchi per ogni riga deve corrispondere esattamente al valore in input per quella riga
+constraint forall(i in indices) (
+  sum(j in indices) (results[i,j] != Empty) = rowSum[i]
+);
+
+%il numero di buchi per ogni colonna deve corrispondere esattamente al valore in input per quella colonna
+constraint forall(j in indices) (
+  sum(i in indices) (results[i,j] != Empty) = colSum[j]
+);
+
+%Non è possibile che ad una cella venga assegnato Right se alla sua destra il gruppo non cambia
+constraint forall(i in indices, j in indices) (
+  if results[i,j] == Right then groups[i,j] != groups[i,j+1] else true endif
+);
+
+%Non è possibile che ad una cella venga assegnato Down se sotto di essa il gruppo non cambia
+constraint forall(i in indices, j in indices) (
+  if results[i,j] == Down then groups[i,j] != groups[i+1,j] else true endif
+);
 
 function var int: count_right(int: group1, int: group2) = count(i in indices, j in indices where groups[i,j] == group1 /\ groups[i,j+1] == group2) (results[i,j] == Right);
 
@@ -23,26 +55,6 @@ function var int: count_down(int: group1, int: group2) = count(i in indices, j i
 constraint forall(i in rowPair, j in colPair) (
   if pair[i,j] == 1 then (count_right(i,j) + count_down(i,j)) == 1 \/ (count_right(j,i) + count_down(j,i)) == 1 else true endif
 );
-
-constraint forall(i in indices, j in indices) (
-  if results[i,j] == Right then groups[i,j] != groups[i,j+1] else true endif
-);
-
-constraint forall(i in indices, j in indices) (
-  if results[i,j] == Down then groups[i,j] != groups[i+1,j] else true endif
-);
-
-constraint forall(i in indices) (
-  sum(j in indices) (results[i,j] != Empty) = rowSum[i]
-);
-
-constraint forall(j in indices) (
-  sum(i in indices) (results[i,j] != Empty) = colSum[j]
-);
-
-constraint forall(i in indices) (results[i,n] != Right);
-
-constraint forall(j in indices) (results[n,j] != Down);
 
 constraint forall(i in indices, j in indices) (
   if results[i,j] == Right then results[i,j+1] = Implicit else true endif
