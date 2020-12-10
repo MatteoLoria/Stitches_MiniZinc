@@ -1,5 +1,5 @@
 int: n;
-constraint assert(n > 1, "n must be at least 2");
+constraint assert(n == 5 \/ n == 7 \/ n == 10 \/ n == 15, "n must be equal to 5 or 7 or 10 or 15");
 
 enum TYPE = {Empty, Right, Down, Implicit};
 set of int: indices = 1..n;
