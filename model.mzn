@@ -1,26 +1,38 @@
 int: n;
+constraint assert(n > 1, "n must be at least 2");
 
 enum TYPE = {Empty, Right, Down, Implicit};
 set of int: indices = 1..n;
 
 %numero di buchi esatti per riga e colonna
 array[indices] of int: rowSum;
+constraint assert(forall(i in indices)(rowSum[i] >= 0 /\ rowSum[i] <= n), "Each row clue mustn't be negative and mustn't be greater than n");
+
 array[indices] of int: colSum;
+constraint assert(forall(i in indices)(colSum[i] >= 0 /\ colSum[i] <= n), "Each column clue mustn't be negative and mustn't be greater than n");
+
 
 %matrice di gruppi
-array[indices, indices] of int: groups; % il numero di gruppi è sempre n?
+array[indices, indices] of int: groups;
 % controllo 1/, ecc...
 
 %matrice di variabili decisionali
 array[indices, indices] of var TYPE: results;
 
 
+%dimensioni della matrice di adiacenza dei gruppi
 int: rowN;
+constraint assert(rowN > 0, "Number of groups must be greater than 0");
+
 int: colN;
+constraint assert(colN > 0, "Number of groups must be greater than 0");
+
 set of int: rowPair = 1..rowN;
 set of int: colPair = 1..colN;
+
 %matrice di adiacenza
 array[rowPair, colPair] of int: pair;
+constraint assert(forall(i in rowPair, j in colPair)(pair[i,j] >= 0 /\ pair[i,j] <= 1), "Elements of the adjacency matrix must be 0 or 1");
 
 %l'ultima colonna non può avere un valore "Right"
 constraint forall(i in indices) (results[i,n] != Right);
