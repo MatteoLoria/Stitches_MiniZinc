@@ -2,8 +2,8 @@ import sys
 
 instance_name = sys.argv[1]
 
-f_write = open("../" + instance_name + ".dzn", "w")
-f_json = open("../" + instance_name + ".json", "w")
+f_write = open("../input/" + instance_name + "10.dzn", "w")
+f_json = open("../input/" + instance_name + "10.json", "w")
 f_read = open(instance_name, "r")
 
 f_json.write("{")
@@ -63,6 +63,8 @@ for i in range(n):
         matrix_json = matrix_json[:len(matrix_json) - 1]
 matrix = matrix + "];"
 matrix_json = matrix_json + "]\n]"
+
+groups = [int(e) for e in groups]
 
 rowN = max(groups)
 colN = rowN
