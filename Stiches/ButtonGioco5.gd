@@ -1,14 +1,16 @@
 extends Button
 
+#Gioco5 : 1,2,3
+#Gioco7: 4, 6
+#Gioco10: 5,7,8
+#Gioco15: 9,10
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var dictGioco = {}
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

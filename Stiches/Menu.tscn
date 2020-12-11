@@ -37,9 +37,9 @@ __meta__ = {
 
 [node name="Gioco10" type="Button" parent="."]
 margin_left = 447.0
-margin_top = 471.0
+margin_top = 472.0
 margin_right = 667.0
-margin_bottom = 521.0
+margin_bottom = 522.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "Avvia Gioco10"
