@@ -2,8 +2,8 @@ import sys
 
 instance_name = sys.argv[1]
 
-f_write = open("../input/" + instance_name + "10.dzn", "w")
-f_json = open("../input/" + instance_name + "10.json", "w")
+f_write = open("../input/" + instance_name + "9.dzn", "w")
+f_json = open("../input/" + instance_name + "9.json", "w")
 f_read = open(instance_name, "r")
 
 f_json.write("{")
@@ -84,8 +84,8 @@ for i in range(n):
             adjacents[matrix_groups[i][j] - 1][matrix_groups[i + 1][j] - 1] = 1
 
 pair = "pair=[|"
-for i in range(int(n)):
-    for j in range(int(n)):
+for i in range(int(rowN)):
+    for j in range(int(colN)):
         pair = pair + str(adjacents[i][j]) + ","
     pair = pair[:len(pair) - 1] + "|"
 pair = pair + "];"
