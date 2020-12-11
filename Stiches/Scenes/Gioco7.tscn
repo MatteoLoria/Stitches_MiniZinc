@@ -29,64 +29,136 @@ position = Vector2( 736, 272 )
 position = Vector2( 800, 272 )
 
 [node name="Quadrato6" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 544, 336 )
+position = Vector2( 861, 272 )
 
 [node name="Quadrato7" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 608, 336 )
+position = Vector2( 924, 272 )
 
 [node name="Quadrato8" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 672, 336 )
+position = Vector2( 544, 336 )
 
 [node name="Quadrato9" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 736, 336 )
+position = Vector2( 608, 336 )
 
 [node name="Quadrato10" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 800, 336 )
+position = Vector2( 672, 336 )
 
 [node name="Quadrato11" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 544, 400 )
+position = Vector2( 736, 336 )
 
 [node name="Quadrato12" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 608, 400 )
+position = Vector2( 800, 336 )
 
 [node name="Quadrato13" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 672, 400 )
+position = Vector2( 861, 336 )
 
 [node name="Quadrato14" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 736, 400 )
+position = Vector2( 924, 336 )
 
 [node name="Quadrato15" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 800, 400 )
+position = Vector2( 544, 400 )
 
 [node name="Quadrato16" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 544, 464 )
+position = Vector2( 608, 400 )
 
 [node name="Quadrato17" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 608, 464 )
+position = Vector2( 672, 400 )
 
 [node name="Quadrato18" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 672, 464 )
+position = Vector2( 736, 400 )
 
 [node name="Quadrato19" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 736, 464 )
+position = Vector2( 800, 400 )
 
 [node name="Quadrato20" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 800, 464 )
+position = Vector2( 861, 400 )
 
 [node name="Quadrato21" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 544, 528 )
+position = Vector2( 924, 400 )
 
 [node name="Quadrato22" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 608, 528 )
+position = Vector2( 544, 464 )
 
 [node name="Quadrato23" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 672, 528 )
+position = Vector2( 608, 464 )
 
 [node name="Quadrato24" parent="Blocchi" instance=ExtResource( 1 )]
-position = Vector2( 736, 528 )
+position = Vector2( 672, 464 )
 
 [node name="Quadrato25" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 736, 464 )
+
+[node name="Quadrato26" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 800, 464 )
+
+[node name="Quadrato27" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 861, 464 )
+
+[node name="Quadrato28" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 924, 464 )
+
+[node name="Quadrato29" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 544, 528 )
+
+[node name="Quadrato30" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 608, 528 )
+
+[node name="Quadrato31" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 672, 528 )
+
+[node name="Quadrato32" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 736, 528 )
+
+[node name="Quadrato33" parent="Blocchi" instance=ExtResource( 1 )]
 position = Vector2( 800, 528 )
+
+[node name="Quadrato34" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 861, 528 )
+
+[node name="Quadrato35" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 924, 528 )
+
+[node name="Quadrato36" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 544, 592 )
+
+[node name="Quadrato37" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 608, 592 )
+
+[node name="Quadrato38" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 672, 592 )
+
+[node name="Quadrato39" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 736, 592 )
+
+[node name="Quadrato40" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 800, 592 )
+
+[node name="Quadrato41" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 861, 592 )
+
+[node name="Quadrato42" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 924, 592 )
+
+[node name="Quadrato43" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 544, 656 )
+
+[node name="Quadrato44" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 608, 656 )
+
+[node name="Quadrato45" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 672, 656 )
+
+[node name="Quadrato46" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 736, 656 )
+
+[node name="Quadrato47" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 800, 656 )
+
+[node name="Quadrato48" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 861, 656 )
+
+[node name="Quadrato49" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 924, 656 )
 
 [node name="ColSum" type="Node2D" parent="."]
 
@@ -146,6 +218,32 @@ __meta__ = {
 margin_left = 776.0
 margin_top = 184.0
 margin_right = 826.0
+margin_bottom = 234.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="ColSum"]
+margin_left = 832.0
+margin_top = 184.0
+margin_right = 882.0
+margin_bottom = 234.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="ColSum"]
+margin_left = 896.0
+margin_top = 184.0
+margin_right = 946.0
 margin_bottom = 234.0
 custom_fonts/font = SubResource( 1 )
 text = "1"
@@ -215,6 +313,32 @@ margin_left = 520.0
 margin_top = 440.0
 margin_right = 570.0
 margin_bottom = 490.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="RowSum"]
+margin_left = 520.0
+margin_top = 504.0
+margin_right = 570.0
+margin_bottom = 554.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="RowSum"]
+margin_left = 520.0
+margin_top = 568.0
+margin_right = 570.0
+margin_bottom = 618.0
 custom_fonts/font = SubResource( 1 )
 text = "1"
 align = 1

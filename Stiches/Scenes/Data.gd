@@ -1,30 +1,42 @@
 extends Node
 
-var colSum = [3,1,3,1,2]
-var rowSum = [2,1,2,4,1]
+var colSum = []
+var rowSum = []
 var n;
 var groups = [];
+var input = {}
 
 func _ready():
-	setN(5)
-	setTemp()
+	var output = []
+	OS.execute('batch.bat', [], true, output) #non va, provare con un file bat? 
+	print(output)
+	
+	var json = File.new()
+	
+	if not json.file_exists("input.txt.json"):
+		print("Missing json file.")
+	else:
+		json.open("input.txt.json", File.READ)
+		var text = json.get_as_text()
+		var parsed = JSON.parse(text)
+		input = parsed.result
+		json.close()
+	
+	setInput()
+
 
 func setN(numb):
 	n = numb
 
-func setTemp():
-	
-	var tempGroups1 = [1,1,1,2,2]
-	var tempGroups2 = [1,1,1,1,2]
-	var tempGroups3 = [3,3,3,1,1]
-	var tempGroups4 = [4,3,5,5,5]
-	var tempGroups5 = [4,3,3,3,3]
-	
-	groups.push_back(tempGroups1)
-	groups.push_back(tempGroups2)
-	groups.push_back(tempGroups3)
-	groups.push_back(tempGroups4)
-	groups.push_back(tempGroups5)
+func getN():
+	return n
+
+func setInput():
+	colSum = input["colSum"]
+	rowSum = input["rowSum"]
+	setN(input["n"])
+	groups = input["groups"]
+
 
 func getGroups():
 	return groups
