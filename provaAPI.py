@@ -11,9 +11,32 @@ def main():
     rowN = 5
     colN = 5
     pair = []
-    groups.append([0, 1, 1, 1, 0])
-    groups.append([1, 0, 0, 0, 0])
-    groups.append([0, 0, 0, 1, 0])
-    groups.append([0, 0, 1, 0, 1])
-    groups.append([0, 0, 0, 1, 0])
-    
+    pair.append([0, 1, 1, 1, 0])
+    pair.append([1, 0, 0, 0, 0])
+    pair.append([0, 0, 0, 1, 0])
+    pair.append([0, 0, 1, 0, 1])
+    pair.append([0, 0, 0, 1, 0])
+
+    model = Model("model.mzn")
+    gecode = Solver.lookup("gecode")
+    instance = Instance(gecode, model)
+    instance['n'] = n
+    instance['groups'] = groups
+    instance['rowN'] = rowN
+    instance['colN'] = colN
+    instance['pair'] = pair
+    result = instance.solve()
+    if not result:
+        print("NO SOL")
+    else:
+        solutionCol = result['colSum']
+        solutionRow = result['rowSum']
+        solutionRes = result['results']
+
+        print(solutionCol)
+        print(solutionRow)
+        print(solutionRes)
+
+if __name__ == '__main__':
+    main()
+
