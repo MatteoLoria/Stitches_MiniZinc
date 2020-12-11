@@ -5,11 +5,11 @@ enum TYPE = {Empty, Right, Down, Implicit};
 set of int: indices = 1..n;
 
 %numero di buchi esatti per riga e colonna
-array[indices] of int: rowSum;
-constraint assert(forall(i in indices)(rowSum[i] >= 0 /\ rowSum[i] <= n), "Each row clue mustn't be negative and mustn't be greater than n");
+array[indices] of var int: rowSum;
+%constraint assert(forall(i in indices)(rowSum[i] >= 0 /\ rowSum[i] <= n), "Each row clue mustn't be negative and mustn't be greater than n");
 
-array[indices] of int: colSum;
-constraint assert(forall(i in indices)(colSum[i] >= 0 /\ colSum[i] <= n), "Each column clue mustn't be negative and mustn't be greater than n");
+array[indices] of var int: colSum;
+%constraint assert(forall(i in indices)(colSum[i] >= 0 /\ colSum[i] <= n), "Each column clue mustn't be negative and mustn't be greater than n");
 
 
 %matrice di gruppi
@@ -82,4 +82,8 @@ constraint forall(i in indices, j in indices) (
 
 solve satisfy;
 
+output ["\(rowSum[i]) " | i in indices];
+output ["\n"];
+output ["\(colSum[i]) " | i in indices];
+output ["\n"];
 output ["\(results[i,j])," ++ if j == n then "\n" else " " endif | i in indices, j in indices];

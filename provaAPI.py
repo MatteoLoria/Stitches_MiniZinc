@@ -17,7 +17,8 @@ def main():
     pair.append([0, 0, 1, 0, 1])
     pair.append([0, 0, 0, 1, 0])
 
-    model = Model("model.mzn")
+    # model = Model("model.mzn")
+    model = Model("gen.mzn")
     gecode = Solver.lookup("gecode")
     instance = Instance(gecode, model)
     instance['n'] = n
@@ -25,18 +26,21 @@ def main():
     instance['rowN'] = rowN
     instance['colN'] = colN
     instance['pair'] = pair
-    result = instance.solve()
+
+    result = instance.solve(all_solutions=True)
+
     if not result:
         print("NO SOL")
     else:
-        solutionCol = result['colSum']
-        solutionRow = result['rowSum']
-        solutionRes = result['results']
+        print(result)
+        for i in range(len(result)):
+            solutionCol = result[i, 'colSum']
+            solutionRow = result[i, 'rowSum']
 
-        print(solutionCol)
-        print(solutionRow)
-        print(solutionRes)
+            print(solutionCol)
+            print(solutionRow)
+            print('-------------------\n')
+            # print(solutionRes)
 
 if __name__ == '__main__':
     main()
-
