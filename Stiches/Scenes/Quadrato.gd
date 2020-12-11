@@ -36,26 +36,32 @@ func on_click():
 
 func colora(colore):
 	match colore:
-		"azzurro":
-			self.modulate.r = 0
-			self.modulate.g = 0
-			self.modulate.b = 155
+		"blu":
+			modulate = Color( 0, 0, 1, 1 )
 		"rosso":
-			self.modulate.r = 255
-			self.modulate.g = 0
-			self.modulate.b = 0
+			modulate = Color( 1, 0, 0, 1 )
 		"giallo":
-			self.modulate.r = 255
-			self.modulate.g = 241
-			self.modulate.b = 0
+			modulate = Color( 1, 1, 0, 1 )
 		"verde":
-			self.modulate.r = 0
-			self.modulate.g = 255
-			self.modulate.b = 0
+			modulate = Color( 0, 1, 0, 1 )
 		"bianco":
-			self.modulate.r = 255
-			self.modulate.g = 255
-			self.modulate.b = 255
+			modulate = Color( 1, 1, 1, 1 )
+		"viola":
+			modulate = Color( 0.58, 0.44, 0.86, 1 )
+		"azzurro":
+			modulate = Color( 0.53, 0.81, 0.98, 1 )
+		"arancio":
+			modulate = Color( 1, 0.65, 0, 1 )
+		"ivory":
+			modulate = Color( 1, 1, 0.94, 1 )
+		"peru":
+			modulate = Color( 0.8, 0.52, 0.25, 1 )
+		"turquoise":
+			modulate = Color( 0.25, 0.88, 0.82, 1 )
+		"darkviolet":
+			modulate = Color( 0.58, 0, 0.83, 1 )
+		
+		
 
 func getCerchio():
 	return cerchio

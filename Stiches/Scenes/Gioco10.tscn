@@ -1,0 +1,579 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Quadrato.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/LogicaGioco.gd" type="Script" id=2]
+[ext_resource path="res://PressStart2P-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Blocchi" type="Node2D" parent="."]
+
+[node name="Quadrato" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 96 )
+
+[node name="Quadrato2" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 96 )
+
+[node name="Quadrato3" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 96 )
+
+[node name="Quadrato4" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 96 )
+
+[node name="Quadrato5" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 96 )
+
+[node name="Quadrato6" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 96 )
+
+[node name="Quadrato7" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 96 )
+
+[node name="Quadrato8" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 96 )
+
+[node name="Quadrato9" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 96 )
+
+[node name="Quadrato10" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 96 )
+
+[node name="Quadrato11" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 160 )
+
+[node name="Quadrato12" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 160 )
+
+[node name="Quadrato13" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 160 )
+
+[node name="Quadrato14" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 160 )
+
+[node name="Quadrato15" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 160 )
+
+[node name="Quadrato16" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 160 )
+
+[node name="Quadrato17" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 160 )
+
+[node name="Quadrato18" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 160 )
+
+[node name="Quadrato19" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 160 )
+
+[node name="Quadrato20" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 160 )
+
+[node name="Quadrato21" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 224 )
+
+[node name="Quadrato22" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 224 )
+
+[node name="Quadrato23" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 224 )
+
+[node name="Quadrato24" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 224 )
+
+[node name="Quadrato25" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 224 )
+
+[node name="Quadrato26" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 224 )
+
+[node name="Quadrato27" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 224 )
+
+[node name="Quadrato28" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 224 )
+
+[node name="Quadrato29" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 224 )
+
+[node name="Quadrato30" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 224 )
+
+[node name="Quadrato31" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 288 )
+
+[node name="Quadrato32" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 288 )
+
+[node name="Quadrato33" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 288 )
+
+[node name="Quadrato34" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 288 )
+
+[node name="Quadrato35" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 288 )
+
+[node name="Quadrato36" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 288 )
+
+[node name="Quadrato37" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 288 )
+
+[node name="Quadrato38" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 288 )
+
+[node name="Quadrato39" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 288 )
+
+[node name="Quadrato40" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 288 )
+
+[node name="Quadrato41" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 352 )
+
+[node name="Quadrato42" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 352 )
+
+[node name="Quadrato43" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 352 )
+
+[node name="Quadrato44" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 352 )
+
+[node name="Quadrato45" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 352 )
+
+[node name="Quadrato46" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 352 )
+
+[node name="Quadrato47" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 352 )
+
+[node name="Quadrato48" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 352 )
+
+[node name="Quadrato49" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 352 )
+
+[node name="Quadrato50" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 352 )
+
+[node name="Quadrato51" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 416 )
+
+[node name="Quadrato52" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 416 )
+
+[node name="Quadrato53" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 416 )
+
+[node name="Quadrato54" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 416 )
+
+[node name="Quadrato55" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 416 )
+
+[node name="Quadrato56" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 416 )
+
+[node name="Quadrato57" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 416 )
+
+[node name="Quadrato58" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 416 )
+
+[node name="Quadrato59" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 416 )
+
+[node name="Quadrato60" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 416 )
+
+[node name="Quadrato61" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 480 )
+
+[node name="Quadrato62" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 480 )
+
+[node name="Quadrato63" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 480 )
+
+[node name="Quadrato64" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 480 )
+
+[node name="Quadrato65" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 480 )
+
+[node name="Quadrato66" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 480 )
+
+[node name="Quadrato67" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 480 )
+
+[node name="Quadrato68" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 480 )
+
+[node name="Quadrato69" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 480 )
+
+[node name="Quadrato70" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 480 )
+
+[node name="Quadrato71" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 544 )
+
+[node name="Quadrato72" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 544 )
+
+[node name="Quadrato73" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 544 )
+
+[node name="Quadrato74" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 544 )
+
+[node name="Quadrato75" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 544 )
+
+[node name="Quadrato76" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 544 )
+
+[node name="Quadrato77" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 544 )
+
+[node name="Quadrato78" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 544 )
+
+[node name="Quadrato79" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 544 )
+
+[node name="Quadrato80" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 544 )
+
+[node name="Quadrato81" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 608 )
+
+[node name="Quadrato82" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 608 )
+
+[node name="Quadrato83" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 608 )
+
+[node name="Quadrato84" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 608 )
+
+[node name="Quadrato85" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 608 )
+
+[node name="Quadrato86" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 608 )
+
+[node name="Quadrato87" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 608 )
+
+[node name="Quadrato88" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 608 )
+
+[node name="Quadrato89" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 608 )
+
+[node name="Quadrato90" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 608 )
+
+[node name="Quadrato91" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 360, 672 )
+
+[node name="Quadrato92" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 424, 672 )
+
+[node name="Quadrato93" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 488, 672 )
+
+[node name="Quadrato94" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 552, 672 )
+
+[node name="Quadrato95" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 616, 672 )
+
+[node name="Quadrato96" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 680, 672 )
+
+[node name="Quadrato97" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 744, 672 )
+
+[node name="Quadrato98" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 808, 672 )
+
+[node name="Quadrato99" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 868, 672 )
+
+[node name="Quadrato100" parent="Blocchi" instance=ExtResource( 1 )]
+position = Vector2( 930, 672 )
+
+[node name="ColSum" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="ColSum"]
+margin_left = 336.0
+margin_top = 24.0
+margin_right = 386.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColSum"]
+margin_left = 400.0
+margin_top = 24.0
+margin_right = 450.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColSum"]
+margin_left = 464.0
+margin_top = 24.0
+margin_right = 514.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="ColSum"]
+margin_left = 528.0
+margin_top = 24.0
+margin_right = 578.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="ColSum"]
+margin_left = 592.0
+margin_top = 24.0
+margin_right = 642.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="ColSum"]
+margin_left = 656.0
+margin_top = 24.0
+margin_right = 706.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="ColSum"]
+margin_left = 720.0
+margin_top = 24.0
+margin_right = 770.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="ColSum"]
+margin_left = 784.0
+margin_top = 24.0
+margin_right = 834.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="ColSum"]
+margin_left = 840.0
+margin_top = 24.0
+margin_right = 890.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="ColSum"]
+margin_left = 904.0
+margin_top = 24.0
+margin_right = 954.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RowSum" type="Node2D" parent="."]
+position = Vector2( -64, 64 )
+
+[node name="Label" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 8.0
+margin_right = 402.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 72.0
+margin_right = 402.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 136.0
+margin_right = 402.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 200.0
+margin_right = 402.0
+margin_bottom = 250.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 264.0
+margin_right = 402.0
+margin_bottom = 314.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 328.0
+margin_right = 402.0
+margin_bottom = 378.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 392.0
+margin_right = 402.0
+margin_bottom = 442.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 456.0
+margin_right = 402.0
+margin_bottom = 506.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 520.0
+margin_right = 402.0
+margin_bottom = 570.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="RowSum"]
+margin_left = 352.0
+margin_top = 584.0
+margin_right = 402.0
+margin_bottom = 634.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
