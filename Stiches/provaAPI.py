@@ -1,46 +1,54 @@
-from minizinc import Instance, Model, Solver
+#!/usr/bin/env python
 
-def main():
-    n = 5
-    groups = []
-    groups.append([1, 2, 2, 1, 3])
-    groups.append([1, 1, 1, 1, 3])
-    groups.append([4, 4, 3, 3, 3])
-    groups.append([4, 4, 4, 4, 4])
-    groups.append([5, 5, 4, 4, 5])
-    rowN = 5
-    colN = 5
-    pair = []
-    pair.append([0, 1, 1, 1, 0])
-    pair.append([1, 0, 0, 0, 0])
-    pair.append([0, 0, 0, 1, 0])
-    pair.append([0, 0, 1, 0, 1])
-    pair.append([0, 0, 0, 1, 0])
+import sys
+import os
+import random
+import json
+from minizinc import Model, Solver, Instance
+from numpy import array_split
 
-    # model = Model("model.mzn")
-    model = Model("gen.mzn")
-    gecode = Solver.lookup("gecode")
-    instance = Instance(gecode, model)
-    instance['n'] = n
-    instance['groups'] = groups
-    instance['rowN'] = rowN
-    instance['colN'] = colN
-    instance['pair'] = pair
 
-    result = instance.solve(all_solutions=True)
+def gen(instance_data):
+    instance = Instance(Solver.lookup('gecode'),
+                        Model('gen.mzn'))
 
-    if not result:
-        print("NO SOL")
-    else:
-        print(result)
-        for i in range(len(result)):
-            solutionCol = result[i, 'colSum']
-            solutionRow = result[i, 'rowSum']
+    instance['n'] = instance_data['n']
+    instance['groups'] = instance_data['groups']
+    instance['rowN'] = instance_data['rowN']
+    instance['colN'] = instance_data['colN']
+    instance['pair'] = instance_data['pairs']
 
-            print(solutionCol)
-            print(solutionRow)
-            print('-------------------\n')
-            # print(solutionRes)
+    # results = instance.solve()
+    # results = instance.solve(all_solutions=True)
+    results = instance.solve(nr_solutions=20)
+    res_idx = random.randrange(0, len(results.solution))
 
-if __name__ == '__main__':
-    main()
+    instance_data['rowSum'] = results[res_idx, 'rowSum']
+    instance_data['colSum'] = results[res_idx, 'colSum']
+    instance_data['results'] = results[res_idx, 'results']
+    instance_data['rowSum'] = results[res_idx, 'rowSum']
+    instance_data['colSum'] = results[res_idx, 'colSum']
+    instance_data['results'] = [ e.tolist() for e in array_split(
+        results[res_idx, 'results'],
+        instance_data['n']
+    )]
+    instance_data['results_as_digits'] = [ e.tolist() for e in array_split(
+        [ 0 if e == "Empty" else 1 for e in results[res_idx, 'results'] ],
+        instance_data['n']
+    )]
+
+    return instance_data
+
+
+basedir = f'./input/{sys.argv[1]}'
+inputs = list(filter(lambda e: e.endswith('json'), os.listdir(basedir)))
+grid_filename = os.path.join(basedir, random.choice(inputs))
+
+with open(grid_filename, 'r') as handle:
+    data = json.load(handle)
+
+res = gen(data)
+
+with open('./finalinput.json', 'w') as handle:
+    json.dump(res, handle)
+

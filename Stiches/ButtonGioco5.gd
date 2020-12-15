@@ -10,7 +10,7 @@ var dictGioco = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,9 +19,15 @@ func _ready():
 
 
 func _on_Gioco5_pressed():
-	if "5" in self.name:
+	if "Gioco5" in self.name:
+		Data.avviaGioco(5)
 		SceneManager.goto_scene("res://Scenes/Gioco5.tscn")
-	elif "7" in self.name:
+	elif "Gioco7" in self.name:
+		Data.avviaGioco(7)
 		SceneManager.goto_scene("res://Scenes/Gioco7.tscn")
-	elif "10" in self.name:
+	elif "Gioco10" in self.name:
+		Data.avviaGioco(10)
 		SceneManager.goto_scene("res://Scenes/Gioco10.tscn")
+	elif "Gioco15" in self.name:
+		Data.avviaGioco(15)
+		SceneManager.goto_scene("res://Scenes/Gioco15.tscn")

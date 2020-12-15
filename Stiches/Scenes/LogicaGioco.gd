@@ -61,6 +61,26 @@ func coloraGruppi():
 					blocchi[i][j].colora("peru")
 				10:
 					blocchi[i][j].colora("turquoise")
+				11:
+					blocchi[i][j].colora("darkviolet")
+				12:
+					blocchi[i][j].colora("khaki")
+				13:
+					blocchi[i][j].colora("lavander")
+				14:
+					blocchi[i][j].colora("lawngreen")
+				15:
+					blocchi[i][j].colora("lemonchiffon")
+				16:
+					blocchi[i][j].colora("lightcoral")
+				17:
+					blocchi[i][j].colora("lightgoldenrod")
+				18:
+					blocchi[i][j].colora("lightpink")
+				19:
+					blocchi[i][j].colora("magenta")
+				20:
+					blocchi[i][j].colora("mistyrose")
 
 func setColSum():
 	var colSum = Data.getColSum()
@@ -132,7 +152,9 @@ func disegnaStitch(cerchioAttuale, cerchioPrecedente):
 			stiches.rotation_degrees = -90
 			stiches.position.x = cerchioPrecedente.position.x
 			stiches.position.y = cerchioPrecedente.position.y - 30
-		print(cerchioAttuale.position, " ", cerchioPrecedente.position, " ", stiches.position)
+		#print(cerchioAttuale.position, " ", cerchioPrecedente.position, " ", stiches.position)
+		if n == 15:
+			stiches.scale = Vector2(0.5,0.5)
 		return true
 	return false
 
@@ -162,8 +184,50 @@ func staccaVicini(cerchio):
 			index = i
 	if index > -1:
 		blocksStitches.remove(index)
+
+func checkInside(cerchio1, cerchio2):
+	for i in (blocksStitches.size()):
+		if (blocksStitches[i][0] == cerchio1 or blocksStitches[i][1] == cerchio1):
+			return false
+	
+	for i in (blocksStitches.size()):
+		if (blocksStitches[i][0] == cerchio2 or blocksStitches[i][1] == cerchio2):
+			return false
+	
+	disegnaStitch(cerchio1, cerchio2)
+	cerchio1.mettiCerchio()
+	cerchio2.mettiCerchio()
+	return true
+		
+
+func _on_Hint_pressed():
+	var sol = Data.getImplSol()
+	var check = false
+	for i in (sol.size()):
+		for j in (sol[i].size()):
+			if sol[i][j] == "Down":
+				check = checkInside(blocchi[i][j], blocchi[i+1][j])
+			elif sol[i][j] == "Right":
+				check = checkInside(blocchi[i][j], blocchi[i][j+1])
+			if check:
+				return
+
 		
 
 
+func _on_Check_pressed():
+	var sol = Data.getSol()
+	
+	for i in (blocchi.size()):
+		for j in(blocchi.size()):
+			if sol[i][j] != blocchi[i][j].getCerchio():
+				print("SBAGLIATA")
+				$Risultato.text = "SBAGLIATO"
+				return
+	
+	print("GIUSTO")
+	$Risultato.text = "GIUSTO"
 
 
+func _on_Back_pressed():
+	SceneManager.goto_scene("res://Menu.tscn")

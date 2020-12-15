@@ -6,32 +6,24 @@ var n;
 var groups = [];
 var input = {}
 var solutionJson = {}
+var solution = []
+var implicitSol = []
 
-func _ready():
+func avviaGioco(n):
 	var output = []
-	OS.execute('python', ['script.py', 'input.txt'], true, output)
+	OS.execute('python', ['provaAPI.py', n], true, output)
 	print(output)
 	
 	var json = File.new()
-	var solutionJson = File.new()
 	
-	if not json.file_exists("input.txt.json"):
+	if not json.file_exists("finalinput.json"):
 		print("Missing json file.")
 	else:
-		json.open("input.txt.json", File.READ)
+		json.open("finalinput.json", File.READ)
 		var text = json.get_as_text()
 		var parsed = JSON.parse(text)
 		input = parsed.result
-		json.close()
-	
-	if not solutionJson.file_exists("solutions.json"):
-		print("Missing solution file.")
-	else:
-		json.open("solutions.json", File.READ)
-		var text = json.get_as_text()
-		var parsed = JSON.parse(text)
-		solutionJson = parsed.result
-		print(solutionJson)
+		#print(input)
 		json.close()
 	
 	setInput()
@@ -51,7 +43,8 @@ func setInput():
 	groups = input["groups"]
 
 func setSolution():
-	pass
+	implicitSol = input["results"]
+	solution = input["results_as_digits"]
 
 
 func getGroups():
@@ -63,6 +56,11 @@ func getColSum():
 func getRowSum():
 	return rowSum
 
+func getSol():
+	return solution
+
+func getImplSol():
+	return implicitSol
 
 
 

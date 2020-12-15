@@ -16,7 +16,7 @@ margin_right = 666.0
 margin_bottom = 304.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
-text = "Avvia Gioco5"
+text = "5x5"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -29,7 +29,7 @@ margin_right = 666.0
 margin_bottom = 413.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
-text = "Avvia Gioco7"
+text = "7x7"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -42,7 +42,20 @@ margin_right = 667.0
 margin_bottom = 522.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
-text = "Avvia Gioco10"
+text = "10x10"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gioco15" type="Button" parent="."]
+margin_left = 447.0
+margin_top = 581.0
+margin_right = 667.0
+margin_bottom = 631.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "15x15"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -55,3 +68,4 @@ texture = ExtResource( 3 )
 [connection signal="pressed" from="Gioco5" to="Gioco5" method="_on_Gioco5_pressed"]
 [connection signal="pressed" from="Gioco7" to="Gioco7" method="_on_Gioco5_pressed"]
 [connection signal="pressed" from="Gioco10" to="Gioco10" method="_on_Gioco5_pressed"]
+[connection signal="pressed" from="Gioco15" to="Gioco15" method="_on_Gioco5_pressed"]

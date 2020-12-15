@@ -60,6 +60,24 @@ func colora(colore):
 			modulate = Color( 0.25, 0.88, 0.82, 1 )
 		"darkviolet":
 			modulate = Color( 0.58, 0, 0.83, 1 )
+		"khaki":
+			modulate = Color( 0.94, 0.9, 0.55, 1 )
+		"lavander":
+			modulate = Color( 0.9, 0.9, 0.98, 1 )
+		"lawngreen":
+			modulate = Color( 0.49, 0.99, 0, 1 )
+		"lemonchiffon":
+			modulate = Color( 1, 0.98, 0.8, 1 )
+		"lightcoral":
+			modulate = Color( 0.94, 0.5, 0.5, 1 )
+		"lightgoldenrod":
+			modulate = Color( 0.98, 0.98, 0.82, 1 )
+		"lightpink":
+			modulate = Color( 1, 0.71, 0.76, 1 )
+		"magenta":
+			modulate = Color( 1, 0, 1, 1 )
+		"mistyrose":
+			modulate = Color( 1, 0.89, 0.88, 1 )
 		
 		
 
